@@ -1,0 +1,48 @@
+# The root .gitignore file contains all the rules for ignoring files that apply across the
+# entire repository. It is not a list of all files that anyone may want to ignore; it's
+# only to cope with files created by tools that are widely used.
+#
+# Individual teams may, at their discretion, create .gitignore files in folders that
+# they control that include rules that make sense to their team.  For example, if a team uses
+# Visual Studio, then it would make sense for them to create a .gitignore file that includes
+# "bin" and "obj". Since Visual Studio is not used across the board, and some teams might
+# have reasons for creating folders named "bin" and "obj", there is no rule for it in this file.
+#
+# Github maintains a reasonable .gitignore list for Visual Studio projects, here:
+# https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+
+/**/*.snt
+/*/*/.language
+/*/*/*/.language
+
+# Build log files
+/**/*.log
+/**/*.err
+/**/*.wrn
+
+# NCrunch
+/**/_NCrunch_*/**
+
+# Visual Studio
+/**/.vs/
+/**/*.cache
+/**/launchSettings.json
+
+# Visual Studio Code
+/**/.vscode/
+
+# User-specific files
+/**/*.user
+
+# Git CB builds
+/otools/inc/otools/OfficeLocalVersion.txt
+/otools/inc/otools/LocalScope.json
+/otools/inc/otools/LocalSyncState.json
+
+# Mac Builds
+/mbu_branch_environment.xcconfig
+/**/.DS_Store
+
+bin
+obj
