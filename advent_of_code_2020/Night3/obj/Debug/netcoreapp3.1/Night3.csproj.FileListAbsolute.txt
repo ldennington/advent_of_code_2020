@@ -1,0 +1,13 @@
+C:\repos\advent_of_code\advent_of_code_2020\Night3\bin\Debug\netcoreapp3.1\Night3.exe
+C:\repos\advent_of_code\advent_of_code_2020\Night3\bin\Debug\netcoreapp3.1\Night3.deps.json
+C:\repos\advent_of_code\advent_of_code_2020\Night3\bin\Debug\netcoreapp3.1\Night3.runtimeconfig.json
+C:\repos\advent_of_code\advent_of_code_2020\Night3\bin\Debug\netcoreapp3.1\Night3.runtimeconfig.dev.json
+C:\repos\advent_of_code\advent_of_code_2020\Night3\bin\Debug\netcoreapp3.1\Night3.dll
+C:\repos\advent_of_code\advent_of_code_2020\Night3\bin\Debug\netcoreapp3.1\Night3.pdb
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.csproj.CoreCompileInputs.cache
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.AssemblyInfoInputs.cache
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.AssemblyInfo.cs
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.dll
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.pdb
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.genruntimeconfig.cache
+C:\repos\advent_of_code\advent_of_code_2020\Night3\obj\Debug\netcoreapp3.1\Night3.csprojAssemblyReference.cache
