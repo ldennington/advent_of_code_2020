@@ -44,19 +44,19 @@ namespace Night4.Test
         [TestMethod]
         public void Verify_Get_Valid_Passports()
         {
-            List<Dictionary<string, string>> input = new List<Dictionary<string, string>>()
+            List<Passport> input = new List<Passport>()
             {
-                new Dictionary<string, string>() {
-                    { "ecl", "gry" },
+                new Passport (new Dictionary<string, string>() {
+                    { "ecl", "blu" },
                     { "pid", "860033327" },
                     { "eyr", "2020" },
                     { "hcl", "#fffffd" },
                     { "byr", "1937" },
-                    { "iyr", "147" },
+                    { "iyr", "2010" },
                     { "cid", "147" },
                     { "hgt", "183 cm" },
-                },
-                new Dictionary<string, string>() {
+                }),
+                new Passport (new Dictionary<string, string>() {
                     { "ecl", "gry" },
                     { "pid", "860033327" },
                     { "eyr", "2020" },
@@ -64,16 +64,16 @@ namespace Night4.Test
                     { "byr", "1937" },
                     { "iyr", "147" },
                     { "hgt", "183 cm" },
-                },
-                new Dictionary<string, string>() {
+                }),
+                new Passport (new Dictionary<string, string>() {
                     { "ecl", "gry" },
                     { "pid", "860033327" },
                     { "byr", "1937" },
                     { "iyr", "147" },
                     { "hgt", "183 cm" },
-                },
+                }),
             };
-            Program.GetValidPassports(input).Should().Be(2);
+            Program.GetValidPassports(input).Should().Be(1);
         }
     }
 }
