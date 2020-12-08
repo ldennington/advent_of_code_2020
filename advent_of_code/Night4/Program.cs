@@ -11,7 +11,7 @@ namespace Night4
     {
         static void Main(string[] args)
         {
-            string[] input = File.ReadAllLines(@"C:\repos\advent_of_code_2020\advent_of_code\data\night4_part1.txt");
+            string[] input = File.ReadAllLines(@"C:\repos\advent_of_code_2020\advent_of_code\data\night4.txt");
             List <Passport> passports = ParseInput(input);
 
             Console.WriteLine($"Valid passports: {GetValidPassports(passports)}");
