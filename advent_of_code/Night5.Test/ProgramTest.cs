@@ -27,7 +27,6 @@ namespace Night5.Test
 
         [DataTestMethod]
         [DataRow(new int[] { 0, 1, 2, 3 }, 2, new int[] { 0, 1 }, new int[] { 2, 3 })]
-        [DataRow(new char[] { 'F', 'F', 'B', 'L', 'R' }, 2, new char[] { 'F', 'F', 'B' }, new char[] { 'L', 'R' })]
         public void Verify_Split_Int(int[] input, int index, int[] expectedTop, int[] expectedBottom)
         {
             Program.Split(input, index, out int[] top, out int[] bottom);
