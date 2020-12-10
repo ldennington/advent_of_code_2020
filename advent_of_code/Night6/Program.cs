@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 [assembly: InternalsVisibleToAttribute("Night6.Test")]
 namespace Night6
@@ -14,50 +16,67 @@ namespace Night6
             Console.WriteLine($"Total of unique answers: { CalculateFinalTotal(ParseInput(input)) }");
         }
 
-        internal static List<string> ParseInput(string[] input)
+        internal static List<List<string>> ParseInput(string[] input)
         {
-            List<string> groupedAnswers = new List<string>();
-            string answers = "";
+            List<List<string>> groupedRespondentList = new List<List<string>>();
+            List<string> groupedRespondents = new List<string>();
 
             foreach (string item in input)
-            {
+            {             
                 if (item != "")
                 {
-                    answers += item;
+                    groupedRespondents.Add(item);
                 }
                 else
                 {
-                    groupedAnswers.Add(answers);
-                    answers = "";
+                    groupedRespondentList.Add(groupedRespondents);
+                    groupedRespondents = new List<string>();
                 }
             }
 
-            return groupedAnswers;
+            return groupedRespondentList;
         }
 
-        internal static int CalculateFinalTotal(List<string> groupedAnswers)
+        internal static int CalculateFinalTotal(List<List<string>> respondentList)
         {
-            int finalTotal = 0;
+            int finalCount = 0;
 
-            foreach (string answer in groupedAnswers)
+            foreach (List<string> groupedResponses in respondentList)
             {
-                finalTotal += CalculateGroupTotal(answer);
+                finalCount += CalculateGroupTotal(groupedResponses);
             }
 
-            return finalTotal;
+            return finalCount;
         }
 
-        internal static int CalculateGroupTotal(string answer)
+        internal static int CalculateGroupTotal(List<string> groupedResponses)
         {
-            char[] letters = answer.ToCharArray();
-            HashSet<char> uniqueLetters = new HashSet<char>();
+            HashSet<char> evaluatedLetters = new HashSet<char>();
+            Dictionary<char, int> lettersAndCounts = new Dictionary<char, int>();
 
-            foreach(char letter in letters)
+            foreach(string response in groupedResponses)
             {
-                uniqueLetters.Add(letter);
+                AddOrCountLetters(response, lettersAndCounts);
             }
 
-            return uniqueLetters.Count;
+            return lettersAndCounts.Values.Count(c => c == groupedResponses.Count);
+        }
+
+        internal static void AddOrCountLetters(string response, Dictionary<char, int> lettersAndCounts)
+        {
+            char[] letters = response.ToCharArray();
+
+            foreach (char letter in letters)
+            {
+                if (lettersAndCounts.ContainsKey(letter))
+                {
+                    lettersAndCounts[letter]++;
+                }
+                else
+                {
+                    lettersAndCounts.Add(letter, 1);
+                }
+            }
         }
     }
 }
