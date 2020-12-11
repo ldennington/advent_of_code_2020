@@ -11,7 +11,7 @@ namespace Night5
     {
         static void Main(string[] args)
         {
-            string[] input = File.ReadAllLines(@"C:\repos\advent_of_code_2020\advent_of_code\data\night5.txt");
+            string[] input = File.ReadAllLines(@"C:\repos\advent_of_code_2020\data\night5.txt");
             List<int> seats = new List<int>();
 
             foreach(string item in input)

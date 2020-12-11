@@ -12,7 +12,7 @@ namespace Night6
     {
         static void Main(string[] args)
         {
-            string[] input = File.ReadAllLines(@"C:\repos\advent_of_code_2020\advent_of_code\data\night6.txt");
+            string[] input = File.ReadAllLines(@"C:\repos\advent_of_code_2020\data\night6.txt");
             Console.WriteLine($"Total of unique answers: { CalculateFinalTotal(ParseInput(input)) }");
         }
 
